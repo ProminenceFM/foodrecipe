@@ -1,6 +1,6 @@
 # Flutter Project - Food Recipe
 
-### Instruction
+### Instruction:
 
 Reproduce the Detail screen below in Flutter.
 
