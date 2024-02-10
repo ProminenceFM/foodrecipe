@@ -50,7 +50,10 @@ class FoodPreparePage extends StatelessWidget {
               MakePageVideo(videoimage: 'assets/images/img1.png'),
               MakePageReviewSection(
                   rating: '4,5', countreviews: '(300 reviews)'),
-              MakePageAccountSection(accountimage: 'assets/images/unplashimg.png', accountname: 'Robert Anny', accountlocation: 'Bali, Indonesia')
+              MakePageAccountSection(
+                  accountimage: 'assets/images/unplashimg.png',
+                  accountname: 'Robert Anny',
+                  accountlocation: 'Bali, Indonesia')
             ]),
           ),
         ));
@@ -135,7 +138,6 @@ class MakePageReviewSection extends StatelessWidget {
   }
 }
 
-
 class MakePageAccountSection extends StatelessWidget {
   const MakePageAccountSection(
       {super.key,
@@ -152,32 +154,75 @@ class MakePageAccountSection extends StatelessWidget {
     return Row(
       children: [
         Row(
-          children: [Image.asset(accountimage),
-          Column(
-            children: [
+          children: [
+            Image.asset(accountimage),
+            Column(children: [
               Text(accountname),
-              Row(
-                children:[
+              Row(children: [
                 Image.asset('assets/images/Location.png'),
                 Text(accountlocation)
-                ]
-              )
-            ]
-          )],
+              ])
+            ])
+          ],
         ),
-        ElevatedButton(onPressed: (){}, 
-        child: Text('Follow')
-        )
+        ElevatedButton(onPressed: () {}, child: Text('Follow'))
       ],
     );
   }
 }
 
-class MakePageIngredientsSection extends StatelessWidget{
-  const MakePageIngredientsSection({super.key})
+class MakePageIngredientsSection extends StatelessWidget {
+  const MakePageIngredientsSection({super.key});
 
-  
+  Widget build(BuildContext context) {
+    return const Column(children: [
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [Text('Ingredients'), Text('5 Items')],
+      ),
+      MakePageIngredientColumn(),
+    ]);
+  }
 }
+
+class MakePageIngredientColumn extends StatelessWidget {
+  const MakePageIngredientColumn({super.key});
+
+  Widget build(BuildContext context) {
+    return const Column(
+      children: [
+        MakePageIngredient(ingredientimage: 'assets/images/food1.png', ingredientname: 'Bread', ingredientweight: '200g'),
+        MakePageIngredient(ingredientimage: 'assets/images/food2.png', ingredientname: 'Eggs', ingredientweight: '200g'),
+        MakePageIngredient(ingredientimage: 'assets/images/food1.png', ingredientname: 'Milk', ingredientweight: '200g')
+      ],
+    );
+  }
+}
+
+class MakePageIngredient extends StatelessWidget {
+  const MakePageIngredient(
+      {super.key,
+      required this.ingredientimage,
+      required this.ingredientname,
+      required this.ingredientweight});
+
+  final String ingredientimage;
+  final String ingredientname;
+  final String ingredientweight;
+
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Row(
+          children: [Image.asset(ingredientimage), Text(ingredientname)],
+        ),
+        Text(ingredientweight)
+      ],
+    );
+  }
+}
+
 // class AppBarComponent extends StatelessWidget {
 //   const AppBarComponent({super.key});
 
