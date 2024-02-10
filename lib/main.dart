@@ -34,17 +34,22 @@ class FoodPreparePage extends StatelessWidget {
           actions: [
             IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.more_vert),
+              icon: const Icon(Icons.more_horiz),
             ),
           ],
         ),
         body: const SingleChildScrollView(
-          child: Column(children: [
-            MakePageTitleSection(maketitle: "How to make French Toast"),
-            MakePageVideo(videoimage: 'assets/images/img1.png'),
-          ]),
-        )
-        );
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.0),
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              MakePageTitleSection(maketitle: "How to make French Toast"),
+              MakePageVideo(videoimage: 'assets/images/img1.png'),
+              MakePageReviewSection(
+                  rating: '4,5', countreviews: '(300 reviews)')
+            ]),
+          ),
+        ));
   }
 }
 
@@ -55,11 +60,17 @@ class MakePageTitleSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      maketitle,
-      style: const TextStyle(fontWeight: FontWeight.bold,
-      color: Colors.black),
-    );
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Text(
+        maketitle,
+        style: const TextStyle(
+            fontWeight: FontWeight.w900,
+            fontSize: 25.0,
+            fontFamily: 'Poppins',
+            color: Colors.black),
+        textAlign: TextAlign.left,
+      )
+    ]);
   }
 }
 
@@ -71,16 +82,87 @@ class MakePageVideo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Stack(
-        alignment:Alignment.center,
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(15.0),
-            child: Image.asset(videoimage, width:300.0, height:200, fit: BoxFit.cover,),
+        child: Stack(alignment: Alignment.center, children: [
+      ClipRRect(
+        borderRadius: BorderRadius.circular(15.0),
+        child: Expanded(
+          child: Image.asset(
+            videoimage,
+            height: 200,
+            fit: BoxFit.cover,
           ),
-          Image.asset('assets/images/Playbutton.png', width:300.0,),
-        ]
-      )
+        ),
+      ),
+      Image.asset('assets/images/Playbutton.png'),
+    ]));
+  }
+}
+
+class MakePageReviewSection extends StatelessWidget {
+  const MakePageReviewSection(
+      {super.key, required this.rating, required this.countreviews});
+
+  final String rating;
+  final String countreviews;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Icon(
+          Icons.star,
+          color: Color.fromARGB(255, 238, 255, 0),
+        ),
+        Text(
+          rating,
+          style: const TextStyle(
+            color: Colors.black,
+          ),
+        ),
+        Text(
+          countreviews,
+          style: const TextStyle(
+            color: Colors.black,
+          ),
+        )
+      ],
+    );
+  }
+}
+
+class MakePageAccountSection extends StatelessWidget {
+  const MakePageAccountSection(
+      {super.key,
+      required this.accountimage,
+      required this.accountname,
+      required this.accountlocation});
+
+  final String accountimage;
+  final String accountname;
+  final String accountlocation;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Row(
+          children: [Image.asset(accountimage),
+          Column(
+            children: [
+              Text(accountname),
+              Row(
+                children:[
+                Image.asset('assets/images/Location.png'),
+                Text(accountlocation)
+                ]
+              )
+            ]
+          )],
+        ),
+        ElevatedButton(onPressed: onPressed, 
+        child: Text('Follow')
+      ],
     );
   }
 }
