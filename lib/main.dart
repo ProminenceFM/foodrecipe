@@ -32,9 +32,12 @@ class FoodPreparePage extends StatelessWidget {
             icon: const Icon(Icons.arrow_back),
           ),
           actions: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.more_horiz),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
+              child: IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.more_horiz),
+              ),
             ),
           ],
         ),
@@ -46,7 +49,8 @@ class FoodPreparePage extends StatelessWidget {
               MakePageTitleSection(maketitle: "How to make French Toast"),
               MakePageVideo(videoimage: 'assets/images/img1.png'),
               MakePageReviewSection(
-                  rating: '4,5', countreviews: '(300 reviews)')
+                  rating: '4,5', countreviews: '(300 reviews)'),
+              MakePageAccountSection(accountimage: 'assets/images/unplashimg.png', accountname: 'Robert Anny', accountlocation: 'Bali, Indonesia')
             ]),
           ),
         ));
@@ -131,6 +135,7 @@ class MakePageReviewSection extends StatelessWidget {
   }
 }
 
+
 class MakePageAccountSection extends StatelessWidget {
   const MakePageAccountSection(
       {super.key,
@@ -160,14 +165,19 @@ class MakePageAccountSection extends StatelessWidget {
             ]
           )],
         ),
-        ElevatedButton(onPressed: onPressed, 
+        ElevatedButton(onPressed: (){}, 
         child: Text('Follow')
+        )
       ],
     );
   }
 }
 
+class MakePageIngredientsSection extends StatelessWidget{
+  const MakePageIngredientsSection({super.key})
 
+  
+}
 // class AppBarComponent extends StatelessWidget {
 //   const AppBarComponent({super.key});
 
