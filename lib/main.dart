@@ -40,7 +40,8 @@ class FoodPreparePage extends StatelessWidget {
         ),
         body: const SingleChildScrollView(
           child: Column(children: [
-            MakePageTitleSection(maketitle: "How to make French Toast"), 
+            MakePageTitleSection(maketitle: "How to make French Toast"),
+            MakePageVideo(videoimage: 'assets/images/img1.png'),
           ]),
         )
         );
@@ -77,7 +78,7 @@ class MakePageVideo extends StatelessWidget {
             borderRadius: BorderRadius.circular(15.0),
             child: Image.asset(videoimage, width:300.0, height:200, fit: BoxFit.cover,),
           ),
-          Image.asset('assets/images/Playbutton.jpg')
+          Image.asset('assets/images/Playbutton.png', width:300.0,),
         ]
       )
     );
