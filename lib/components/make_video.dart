@@ -16,7 +16,8 @@ class _MakePageVideoState extends State<MakePageVideo> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 18.0),
+      margin: EdgeInsets.only(top: 18.0),
+      padding: EdgeInsets.only(bottom: 14.0),
       child: Center(
         child: Stack(
           alignment: Alignment.center,
@@ -44,7 +45,6 @@ class _MakePageVideoState extends State<MakePageVideo> {
             if (!isLoading)
               Image.asset(
                 'assets/images/Playbutton.png',
-                width: 50, // Adjust the width according to your design
               ),
           ],
         ),

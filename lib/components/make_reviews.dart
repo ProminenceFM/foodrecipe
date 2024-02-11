@@ -23,6 +23,7 @@ class MakePageReviewSection extends StatelessWidget {
           child: Text(
             rating,
             style: const TextStyle(
+              fontSize:15,
               color: Color(0xFF303030),
               fontWeight: FontWeight.bold,
             ),

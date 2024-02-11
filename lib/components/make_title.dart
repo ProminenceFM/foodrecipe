@@ -11,9 +11,10 @@ class MakePageTitleSection extends StatelessWidget {
       Text(
         maketitle,
         style: const TextStyle(
-            height: 1.1,
-            fontWeight: FontWeight.w600,
-            fontSize: 26.0,
+            height: 1,
+            fontWeight: FontWeight.bold,
+            letterSpacing:1,
+            fontSize: 24.0,
             color: Color(0xFF303030),),
         textAlign: TextAlign.left,
       )

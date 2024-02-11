@@ -42,7 +42,7 @@ class MakePageIngredient extends StatelessWidget {
                         style: const TextStyle(
                             color: Color(0xFF303030),
                             fontWeight: FontWeight.bold,
-                            fontSize: 15.0)),
+                            fontSize: 17.0)),
                   )
                 ],
               ),
@@ -66,21 +66,23 @@ class MakePageIngredientColumn extends StatelessWidget {
             ingredientname: 'Bread',
             ingredientweight: '200g'),
         MakePageIngredient(
-            ingredientimage: 'assets/images/food1.png',
-            ingredientname: 'Bread',
-            ingredientweight: '200g'),
-        MakePageIngredient(
-            ingredientimage: 'assets/images/food1.png',
-            ingredientname: 'Bread',
-            ingredientweight: '200g'),
-        MakePageIngredient(
             ingredientimage: 'assets/images/food2.png',
             ingredientname: 'Eggs',
             ingredientweight: '200g'),
         MakePageIngredient(
             ingredientimage: 'assets/images/food1.png',
             ingredientname: 'Milk',
+            ingredientweight: '200g'),
+        MakePageIngredient(
+            ingredientimage: 'assets/images/food2.png',
+            ingredientname: 'Bread',
+            ingredientweight: '200g'),
+        
+        MakePageIngredient(
+            ingredientimage: 'assets/images/food1.png',
+            ingredientname: 'Bread',
             ingredientweight: '200g')
+        
       ],
     );
   }
@@ -98,11 +100,11 @@ class MakePageIngredientsSection extends StatelessWidget {
             'Ingredients',
             style: TextStyle(
               color: Color(0xFF303030),
-              fontSize: 18.0,
-              fontWeight: FontWeight.w700,
+              fontSize: 20.0,
+              fontWeight: FontWeight.w900,
             ),
           ),
-          Text('5 Items', style: TextStyle(color: Color(0xFFA9A9A9),))
+          Text('5 Items', style: TextStyle(color: Color(0xFFA9A9A9),fontSize: 17,))
         ],
       ),
       MakePageIngredientColumn(),

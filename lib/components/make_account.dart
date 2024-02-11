@@ -41,7 +41,7 @@ class _MakePageAccountSectionState extends State<MakePageAccountSection> {
                         widget.accountname,
                         style: const TextStyle(
                           color: Color(0xFF000000),
-                          fontSize: 18.0,
+                          fontSize: 16.0,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
@@ -52,6 +52,7 @@ class _MakePageAccountSectionState extends State<MakePageAccountSection> {
                           child: Text(widget.accountlocation,
                           style: TextStyle(
                             color: Color(0xFFA9A9A9),
+                            fontSize: 17,
                           )),
                         )
                       ])
@@ -94,7 +95,7 @@ class _MakePageAccountSectionState extends State<MakePageAccountSection> {
             style: ElevatedButton.styleFrom(
               backgroundColor: isFollowing ? Colors.grey : Color(0xFFD14C45),
               foregroundColor: Colors.white,
-              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+              padding: EdgeInsets.symmetric(vertical: 4, horizontal: 12),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),
