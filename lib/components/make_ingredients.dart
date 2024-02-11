@@ -20,7 +20,7 @@ class MakePageIngredient extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             border: Border.all(color: Colors.transparent, width: 2),
-            color: Color(0xFFA9A9A9),
+            color: Color(0xFFF1F1F1),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -40,13 +40,13 @@ class MakePageIngredient extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 8.0),
                     child: Text(ingredientname,
                         style: const TextStyle(
-                            color: Colors.black,
+                            color: Color(0xFF303030),
                             fontWeight: FontWeight.bold,
                             fontSize: 15.0)),
                   )
                 ],
               ),
-              Text(ingredientweight, style: TextStyle(color: Color(0xFF303030)))
+              Text(ingredientweight, style: TextStyle(color: Color(0xFFA9A9A9),))
             ],
           ),
         ),
@@ -97,12 +97,12 @@ class MakePageIngredientsSection extends StatelessWidget {
           Text(
             'Ingredients',
             style: TextStyle(
-              color: Colors.black,
+              color: Color(0xFF303030),
               fontSize: 18.0,
               fontWeight: FontWeight.w700,
             ),
           ),
-          Text('5 Items', style: TextStyle(color: Colors.black))
+          Text('5 Items', style: TextStyle(color: Color(0xFFA9A9A9),))
         ],
       ),
       MakePageIngredientColumn(),

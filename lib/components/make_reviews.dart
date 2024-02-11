@@ -15,7 +15,7 @@ class MakePageReviewSection extends StatelessWidget {
       children: [
         Icon(
           Icons.star,
-          color: Color.fromARGB(255, 255, 217, 0),
+          color: Color(0xFFF4B86F),
           size: 18.0,
         ),
         Padding(
@@ -23,7 +23,7 @@ class MakePageReviewSection extends StatelessWidget {
           child: Text(
             rating,
             style: const TextStyle(
-              color: Colors.black,
+              color: Color(0xFF303030),
               fontWeight: FontWeight.bold,
             ),
           ),

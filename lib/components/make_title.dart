@@ -14,7 +14,7 @@ class MakePageTitleSection extends StatelessWidget {
             height: 1.1,
             fontWeight: FontWeight.w600,
             fontSize: 26.0,
-            color: Colors.black),
+            color: Color(0xFF303030),),
         textAlign: TextAlign.left,
       )
     ]);

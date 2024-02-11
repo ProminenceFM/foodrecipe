@@ -40,7 +40,7 @@ class _MakePageAccountSectionState extends State<MakePageAccountSection> {
                       Text(
                         widget.accountname,
                         style: const TextStyle(
-                          color: Color(0xFF303030),
+                          color: Color(0xFF000000),
                           fontSize: 18.0,
                           fontWeight: FontWeight.w700,
                         ),
@@ -49,7 +49,10 @@ class _MakePageAccountSectionState extends State<MakePageAccountSection> {
                         Image.asset('assets/images/Location.png'),
                         Padding(
                           padding: const EdgeInsets.only(left: 4.0),
-                          child: Text(widget.accountlocation),
+                          child: Text(widget.accountlocation,
+                          style: TextStyle(
+                            color: Color(0xFFA9A9A9),
+                          )),
                         )
                       ])
                     ]),
@@ -89,7 +92,7 @@ class _MakePageAccountSectionState extends State<MakePageAccountSection> {
               ),
             ),
             style: ElevatedButton.styleFrom(
-              backgroundColor: isFollowing ? Colors.grey : Color(0xFFE23E3E),
+              backgroundColor: isFollowing ? Colors.grey : Color(0xFFD14C45),
               foregroundColor: Colors.white,
               padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
               shape: RoundedRectangleBorder(
