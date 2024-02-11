@@ -40,7 +40,7 @@ class _MakePageAccountSectionState extends State<MakePageAccountSection> {
                       Text(
                         widget.accountname,
                         style: const TextStyle(
-                          color: Colors.black,
+                          color: Color(0xFF303030),
                           fontSize: 18.0,
                           fontWeight: FontWeight.w700,
                         ),

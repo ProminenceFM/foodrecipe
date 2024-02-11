@@ -1,68 +1,37 @@
 import 'package:flutter/material.dart';
-import 'package:foodrecipe/components/make_account.dart';
-import 'package:foodrecipe/components/make_ingredients.dart';
-import 'package:foodrecipe/components/make_reviews.dart';
-import 'package:foodrecipe/components/make_title.dart';
-import 'package:foodrecipe/components/make_video.dart';
+import 'package:foodrecipe/components/app_bar.dart';
+import 'package:foodrecipe/make_page.dart';
+
 
 void main() {
-  runApp(const foodApp());
+  runApp(const foodRecipeApp());
 }
 
-class foodApp extends StatelessWidget {
-  const foodApp({super.key});
+class foodRecipeApp extends StatelessWidget {
+  const foodRecipeApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Food App',
+      title: 'Food Recipe App',
       theme: ThemeData(
         fontFamily: 'Poppins',
         primaryColor: const Color(0x30303030),
       ),
-      home: const FoodPreparePage(),
+      home: const FoodRecipePage(),
     );
   }
 }
 
-class FoodPreparePage extends StatelessWidget {
-  const FoodPreparePage({super.key});
+class FoodRecipePage extends StatelessWidget {
+  const FoodRecipePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          leading: IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.arrow_back),
-          ),
-          actions: [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15.0),
-              child: IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.more_horiz),
-              ),
-            ),
-          ],
-        ),
-        body: const SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.0),
-            child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              MakePageTitleSection(maketitle: "How to make french toast"),
-              MakePageVideo(videoimage: 'assets/images/img1.png'),
-              MakePageReviewSection(
-                  rating: '4,5', countreviews: '(300 reviews)'),
-              MakePageAccountSection(
-                  accountimage: 'assets/images/unplashimg.png',
-                  accountname: 'Robert Anny',
-                  accountlocation: 'Bali, Indonesia'),
-              MakePageIngredientsSection(),
-            ]),
-          ),
-        ));
+        appBar: PageAppBar(),
+        body: MakePage(),
+        );
   }
 }
