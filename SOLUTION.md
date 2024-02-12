@@ -16,12 +16,6 @@ Welcome to FoodRecipe App! This Flutter project is designed to provide you with 
     <img src="./foodrecipe/assets/images/back_arrow.jpg" alt="Back Arrow Error Message" style="max-width: 100px;">
 </div>
 
-
-## Getting Started
-
-Certainly! Below is a "Get Started" section for your Flutter app's README.md file:
-
-```markdown
 ## Get Started
 
 Follow these steps to get started with the FoodRecipe Flutter app:
@@ -66,20 +60,15 @@ Feel free to customize the app to fit your requirements. You can modify existing
 
 ### Feedback and Contributions
 
-We welcome feedback, bug reports, and contributions from the community. If you encounter any issues or have suggestions for improvement, please open an issue on our [GitHub repository](<repository-url>). We appreciate any contributions, whether they are bug fixes, feature enhancements, or documentation improvements.
+We welcome feedback, bug reports, and contributions from the community. If you encounter any issues or have suggestions for improvement, please open an issue on our [GitHub repository](https://github.com/ProminenceFM/foodrecipe). We appreciate any contributions, whether they are bug fixes, feature enhancements, or documentation improvements.
 
 ### Enjoy Cooking!
 
 With the FoodRecipe app set up on your device, you're now ready to explore a wide range of delicious recipes and enhance your cooking skills. Happy cooking!
 ```
-
-
-
 ## Dependencies
 
 List of external dependencies used in the project.
 
 - [shimmer](https://pub.dev/packages/shimmer) - Used for adding shimmering effect.
-
-
-
+```
