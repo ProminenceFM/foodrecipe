@@ -6,14 +6,14 @@ Welcome to FoodRecipe App! This Flutter project is designed to provide you with 
 
 ### Screen 1 - MakePage
 
-![MakePage Screen](./assets/images/make_page.jpg)
+![MakePage Screen](./foodrecipe/assets/images/make_page.jpg)
 
 
 ### Screen 1 Functionalities
 <div style="display: flex; justify-content: center;">
-    <img src="./assets/images/follow_unfollow.jpg" alt="Follow/Unfollow Button" style="max-width: 100px; margin-right: 10px;">
-    <img src="./assets/images/dialog_widget.jpg" alt="Dialog Widget" style="max-width: 100px; margin-right: 10px;">
-    <img src="./assets/images/back_arrow.jpg" alt="Back Arrow Error Message" style="max-width: 100px;">
+    <img src="./foodrecipe/assets/images/follow_unfollow.jpg" alt="Follow/Unfollow Button" style="max-width: 100px; margin-right: 10px;">
+    <img src="./foodrecipe/assets/images/dialog_widget.jpg" alt="Dialog Widget" style="max-width: 100px; margin-right: 10px;">
+    <img src="./foodrecipe/assets/images/back_arrow.jpg" alt="Back Arrow Error Message" style="max-width: 100px;">
 </div>
 
 
