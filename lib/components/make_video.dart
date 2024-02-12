@@ -33,6 +33,7 @@ class _MakePageVideoState extends State<MakePageVideo> {
                     ? _buildShimmerEffect()
                     : Image.asset(
                         widget.videoimage,
+                        width: 400,
                         height: 200,
                         fit: BoxFit.cover,
                       ),

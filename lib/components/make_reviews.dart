@@ -16,14 +16,14 @@ class MakePageReviewSection extends StatelessWidget {
         Icon(
           Icons.star,
           color: Color(0xFFF4B86F),
-          size: 18.0,
+          size: 23.0,
         ),
         Padding(
           padding: const EdgeInsets.only(left: 6.0),
           child: Text(
             rating,
             style: const TextStyle(
-              fontSize:15,
+              fontSize: 15,
               color: Color(0xFF303030),
               fontWeight: FontWeight.bold,
             ),

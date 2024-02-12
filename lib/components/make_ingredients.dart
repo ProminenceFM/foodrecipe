@@ -28,10 +28,10 @@ class MakePageIngredient extends StatelessWidget {
               Row(
                 children: [
                   Container(
-                      padding: EdgeInsets.all(8),
+                      padding: EdgeInsets.all(11),
                       margin: EdgeInsets.only(right: 4.0),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
+                        borderRadius: BorderRadius.circular(10),
                         border: Border.all(color: Colors.transparent, width: 2),
                         color: Colors.white,
                       ),
@@ -46,7 +46,10 @@ class MakePageIngredient extends StatelessWidget {
                   )
                 ],
               ),
-              Text(ingredientweight, style: TextStyle(color: Color(0xFFA9A9A9),))
+              Text(ingredientweight,
+                  style: TextStyle(
+                    color: Color(0xFFA9A9A9),
+                  ))
             ],
           ),
         ),
@@ -77,12 +80,10 @@ class MakePageIngredientColumn extends StatelessWidget {
             ingredientimage: 'assets/images/food2.png',
             ingredientname: 'Bread',
             ingredientweight: '200g'),
-        
         MakePageIngredient(
             ingredientimage: 'assets/images/food1.png',
             ingredientname: 'Bread',
             ingredientweight: '200g')
-        
       ],
     );
   }
@@ -96,15 +97,22 @@ class MakePageIngredientsSection extends StatelessWidget {
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
-            'Ingredients',
-            style: TextStyle(
-              color: Color(0xFF303030),
-              fontSize: 20.0,
-              fontWeight: FontWeight.w900,
+          Padding(
+            padding: EdgeInsets.only(bottom: 8.0),
+            child: Text(
+              'Ingredients',
+              style: TextStyle(
+                color: Color(0xFF303030),
+                fontSize: 22.0,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
-          Text('5 Items', style: TextStyle(color: Color(0xFFA9A9A9),fontSize: 17,))
+          Text('5 Items',
+              style: TextStyle(
+                color: Color(0xFFA9A9A9),
+                fontSize: 17,
+              ))
         ],
       ),
       MakePageIngredientColumn(),

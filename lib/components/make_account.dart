@@ -41,7 +41,7 @@ class _MakePageAccountSectionState extends State<MakePageAccountSection> {
                         widget.accountname,
                         style: const TextStyle(
                           color: Color(0xFF000000),
-                          fontSize: 16.0,
+                          fontSize: 16,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
@@ -50,10 +50,10 @@ class _MakePageAccountSectionState extends State<MakePageAccountSection> {
                         Padding(
                           padding: const EdgeInsets.only(left: 4.0),
                           child: Text(widget.accountlocation,
-                          style: TextStyle(
-                            color: Color(0xFFA9A9A9),
-                            fontSize: 17,
-                          )),
+                              style: TextStyle(
+                                color: Color(0xFFA9A9A9),
+                                fontSize: 15,
+                              )),
                         )
                       ])
                     ]),
@@ -97,7 +97,7 @@ class _MakePageAccountSectionState extends State<MakePageAccountSection> {
               foregroundColor: Colors.white,
               padding: EdgeInsets.symmetric(vertical: 4, horizontal: 12),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(15),
               ),
             ),
           )
